@@ -1,3 +1,14 @@
+# [Fly-In-Menu Layout](https://github.com/ankitbhatnagar2012/fly-in-menu)
+
+Fly-In-Menu is built on top of the HTML5 Boilerplate. It implements the popular
+fly-in collapsible menu layout. It is ready to be customised and put to use. Also
+added is a way to drag-and-drop menu items on the main UI. The menu item is cloned
+and then stacked on the parent div.
+
+Fork / Download and use, however you wish to!
+
+Open to cooler changes, request a commit.
+
 # [HTML5 Boilerplate](http://html5boilerplate.com)
 
 HTML5 Boilerplate is a professional front-end template for building fast,
