@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/self.css">
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+        <link href="library/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p>You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div class="wrapper">
+            <div class="navBar">
+                <div class="navLogo"><i>STEPIFYR</i></div>
+                <div class="navLinks">
+                    <a href="#">Home</a> 
+                    <a href="#">Explore</a>
+                    <a href="#">Create</a>
+                    <a href="#">Login</a>
+                </div>
+            </div>
+            <div class="content">
+                <div class="toolStrip" align="center">
+                    <div id="imageUploaderTool"><i class="icon-align-justify icon-white"></i></div>
+                </div>
+                <div class="toolFlyin" align="center">
+                    <div class="toolFlyinContent">
+                        <!-- image upload tools -->
+                        <a href="#">
+                            <div class="draggable" id="box11"></div>
+                        </a><br>
+                        <a href="#">
+                            <div class="draggable" id="_box11">
+                                <div id="box12"></div>
+                                <div id="box12"></div>
+                            </div>
+                        </a><br>
+                        <a href="#">
+                            <div class="draggable" id="_box11">
+                                <div id="box13"></div>
+                                <div id="box13"></div>
+                                <div id="box13"></div>
+                            </div>
+                        </a>                        
+                    </div>
+                </div>
+                <div class="workSpace" align="center">
+                    <div class="userSpace droppable">User Space</div>
+                </div>
+            </div>
+        </div>
+        
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+        <script src="library/bootstrap/js/bootstrap.min.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+        
+        <script type="text/javascript">
+            
+            var isFlyMenuOpen = 0;
+            
+            $(document).ready(function(){
+                $('.toolFlyin').hide();
+                
+                // register click handlers
+                $('#imageUploaderTool').click(function(){
+                    if(isFlyMenuOpen === 0){
+                        // fly-in menu closed
+                        // populate contents of the fly-in menu
+                        $('.toolFlyin').show();                               
+                        $('.toolFlyin').animate({width:"+=250"}, 500, function() {
+                                $('.toolFlyinContent').show();                        
+                                isFlyMenuOpen = 1;                                
+                        });
+                    } else {
+                        // fly-in menu open
+                        $('.toolFlyinContent').hide();                               
+                        $('.toolFlyin').animate({width:"-=250"}, 500, function() {
+                                // hide contents of the fly-in menu
+                                $('.toolFlyin').hide();                               
+                                isFlyMenuOpen = 0;                                
+                        });
+                    }
+                });
+            });
+            
+            $(function() {
+                $( ".draggable" ).draggable({helper:'clone'});
+                $( ".droppable" ).droppable({
+                    accept: ".draggable",
+                    drop: function(event,ui){
+                        $(this).append($(ui.draggable).clone());
+                    }                    
+                });
+            });
+        </script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+    </body>
+</html>

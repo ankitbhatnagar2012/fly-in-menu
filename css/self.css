@@ -1,0 +1,97 @@
+/* 
+    Document   : index.css
+    Created on : 24 Nov, 2013, 2:23:55 AM
+    Author     : Ankit Bhatnagar
+    Description: The primary index css file for the main tool UI        
+*/
+
+.navBar{
+    color: #fff;
+    height: 50px;
+    background-color:#222;
+    font-family: Helvetica;
+    font-size: 20px;
+    line-height: 50px;
+    vertical-align: middle;
+    min-width: 850px;
+    margin: 0 0 0 0;
+}
+
+.navLogo{
+    float:left;
+    padding: 0 0 0 20px;
+}
+
+.navLinks{
+    float: right;
+    padding: 0 30px 0 0;
+}
+
+.navLinks a{
+    color: #fff;
+    text-decoration: none;
+    padding: 0 15px 0 15px;
+}
+
+.content{
+    margin: 1px 0 0 0;
+    width: 100%;
+    float:left;
+    overflow: hidden;
+}
+
+.toolStrip{
+    width: 50px;
+    min-width: 50px;
+    height: 1000px;
+    background-color: #222;
+    float: left;
+    padding: 20px 0 0 0;
+}
+
+.toolFlyin{
+    width: 0px;
+    height: 1000px;
+    background-color: #ececec;
+    float: left;
+    padding: 30px 0 0 0;
+}
+
+.workSpace{
+    overflow: hidden;
+    background-color: #b3d4fc;
+}
+
+.userSpace{
+    width: 800px;
+    min-width: 800px;
+    background-color: #fff;
+    height: 1000px;
+}
+
+#box11{
+    width: 200px;
+    height: 100px;
+    border: 1px dotted #000;
+}
+
+#_box11{
+    width: 200px;
+    height: 100px;
+}
+
+#box12{
+    width: 98px;
+    height: 100px;
+    border: 1px dotted #000;
+    float: left;
+}
+
+#box13{
+    width: 64px;
+    height: 100px;
+    border: 1px dotted #000;
+    float: left;
+}
+
+
