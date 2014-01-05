@@ -7,7 +7,7 @@ and then stacked on the parent div.
 
 Fork / Download and use, however you wish to!
 
-Open to cooler changes, request a commit.
+Open to more cool changes, request a commit.
 
 # [HTML5 Boilerplate](http://html5boilerplate.com)
 
